@@ -23,30 +23,31 @@ public class User {
     @Column(name = "user_pass")
     private String password;
     @NotNull
-    @Size(max = 50)
-    @Column(name = "user_nicename")
+    @Size(max = 60)
+    @Column(name = "user_nicename", length = 60)
     private String nicename;
     @Email
     @NotNull
     @Size(max = 100)
-    @Column(name = "user_email")
+    @Column(name = "user_email", length = 100)
     private String email;
     @URL
     @NotNull
     @Size(max = 100)
-    @Column(name = "user_url")
+    @Column(name = "user_url", length = 100)
     private String url;
     @NotNull
     @Column(name = "user_registered")
     private Timestamp registered;
     @NotNull
     @Size(max = 255)
-    @Column(name = "user_activation_key")
+    @Column(name = "user_activation_key", length = 255)
     private String activationKey;
     @NotNull
     @Column(name = "user_status")
     private Integer status;
 //    @Column(name = "display_name", nullable = false)
+    @NotNull
     @Basic(optional = false)
     private String displayName;
 
